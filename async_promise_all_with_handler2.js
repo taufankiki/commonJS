@@ -10,6 +10,8 @@ async function example6(){
             resolve(300);
         })
 
+        //nanti coba diganti Promise.resolve jadi Promise.reject dan Lihat Perbedaannya 
+        
         return Promise.all([
             prom1.catch(err=>{ console.log(err); }), 
             prom2.catch(err=>{ console.log(err); }), 
