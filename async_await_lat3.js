@@ -9,7 +9,7 @@ async function example3() {
         return varB+1;
     }).then(varC=> {
         console.log('C= Nilai Promise dari Child B: '+varC);
-        return prom1;
+        return prom1; //nilai root yaitu prom1 dipanggil di varC agar bisa diakses oleh varD
     }).then(varD=>{
         console.log('D = Nilai dari Root : '+ varD);
     })
