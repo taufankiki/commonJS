@@ -12,7 +12,7 @@ async function example6(){
                 ifTrue => { console.log(ifTrue) }, // akan di tampilkan semua data jika semua variabel promise resolve.
                 ifFalse => { console.log(ifFalse) } // jika ada data yang reject maka akan dijalankan ifFalse ini, 
                 );
-        // sederhana saja
+
 }
 
 example6();
