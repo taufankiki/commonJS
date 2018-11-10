@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    async function showAvatar() {
+      // read api user
+      let api = await fetch(`http://localhost:8000/enroll`);
+      let user = await api.json();
+    
+      // wait 3 seconds
+      await new Promise((resolve, reject) => setTimeout(resolve, 1000));
+      //passing value
+      return user;
+      
+      //  user.then(result=>console.log(result));
+       
+
+      // ingat kalo di printnya didalam fungsi async variabel yang udah await, maka akan error
+      // returnnya dihilangkan menjadi :
+      // user.then(result=>console.log(result)) --> Maka error yang muncul adalah :
+      // Uncaught (in promise) TypeError: user.then is not a function
+    }
+    
+    // print data
+    showAvatar().then(result=>console.log(result)).catch(alert);
+    // showAvatar();
+  </script>
+</body>
+
+</html>
